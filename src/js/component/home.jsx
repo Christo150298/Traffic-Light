@@ -5,6 +5,7 @@ const Home = () => {
 	const [ selectedColor, setSelectedColor] = useState('red'); 
 	return (
 		<body>
+			<button className="button">Push</button>
 			<div className="container">
 				<div className="traffic-light">
 					<div onClick={() => setSelectedColor("red")}
