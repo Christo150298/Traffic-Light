@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 const Home = () => {
-	const [ selectedColor, setSelectedColor] = useState('red'); 
+	const [ selectedColor, setSelectedColor] = useState(''); 
 	return (
 		<body>
 			<button className="button">Push</button>
