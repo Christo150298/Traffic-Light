@@ -2,10 +2,12 @@ import React from "react";
 import { useState } from "react";
 
 const Home = () => {
-	const [ selectedColor, setSelectedColor] = useState('red'); 
-	const [ addPurple, setAddPurple] = useState('false');
+	const [ selectedColor, setSelectedColor] = useState(''); 
+	const [ addPurple, setAddPurple] = useState(false);
+
+	const handleToggle = () => setAddPurple(!addPurple);
+	
 	return (
-		<body>
 			<div className="col">	
 				<div className="traffic-light">
 					<div onClick={() => setSelectedColor("red")}
@@ -14,17 +16,16 @@ const Home = () => {
 					className={"yellow Light" + (selectedColor === "yellow" ? " selected" : "")}></div>
 					<div onClick={() => setSelectedColor("green")}
 					className={"green Light" + (selectedColor === "green" ? " selected" : "")}></div>
-					<div onClick={() => setAddPurple("purple")}
-					className={"purple Light" + (addPurple === "purple" ? " selected" : "")}></div>
+					{addPurple && <div onClick={() => setSelectedColor("purple")}
+					className={"purple Light" + (selectedColor === "purple" ? " selected" : "")}></div>}
 				</div>
 				<div className="stick"></div>
 				<div className="floor"></div>
 				<div>	
 					<button id="button" className="btn btn-dark">Push to change color</button>
-					<button id="purpleButtom" className="btn btn-dark">Push to add Purple</button>
+					<button onClick={handleToggle} id="purpleButtom" className="btn btn-dark">Push to add Purple</button>
 				</div>
 			</div>
-		</body>
 	);
 };
 
