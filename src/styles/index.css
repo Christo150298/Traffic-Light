@@ -15,6 +15,7 @@ body {
     place-items: center;
     border-radius: 10px;
     display: inline-block;
+    box-shadow: 0 0 3px 3px black;
 }
 .red.Light{
     background-color: #c0392b;
@@ -50,8 +51,9 @@ body {
 .stick{
     display: grid;
     width: 12px;
-    height: 420px;
+    height: 430px;
     background: #2c3e50;
+    border: 2px solid black;
 }
 .floor{
     /* display: grid; */
