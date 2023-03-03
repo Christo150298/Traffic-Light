@@ -23,7 +23,7 @@ const Home = () => {
 				<div className="floor"></div>
 				<div>	
 					<button id="button" className="btn btn-dark">Push to change color</button>
-					<button onClick={handleToggle} id="purpleButtom" className="btn btn-dark">Push to add Purple</button>
+					<button onClick={handleToggle} className="purpleButtom btn btn-dark">Push to add Purple</button>
 				</div>
 			</div>
 	);

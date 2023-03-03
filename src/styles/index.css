@@ -76,7 +76,7 @@ body {
     font-size: x-large;
     font-family: cursive;
 }
-#purpleButtom {
+.purpleButtom {
     border: 2px solid black;
     background-color:#424361;
     width: 180px;
