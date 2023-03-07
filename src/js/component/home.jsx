@@ -6,7 +6,18 @@ const Home = () => {
 	const [ addPurple, setAddPurple] = useState(false);
 
 	const handleToggle = () => setAddPurple(!addPurple);
-	
+
+	const changeColor = () => {
+		setSelectedColor("red");
+		if(selectedColor === "red") {
+			setSelectedColor("yellow");
+		} else if(selectedColor === "yellow"){
+			setSelectedColor("green");
+		} else if(selectedColor === "green") {
+			setSelectedColor("purple");
+		} else{setSelectedColor("red")}
+	}
+
 	return (
 			<div className="col">	
 				<div className="traffic-light">
@@ -22,7 +33,7 @@ const Home = () => {
 				<div className="stick"></div>
 				<div className="floor"></div>
 				<div>	
-					<button id="button" className="btn btn-dark">Push to change color</button>
+					<button onClick={changeColor} id="button" className="btn btn-dark">Push to change color</button>
 					<button onClick={handleToggle} className="purpleButtom btn btn-dark">Push to add Purple</button>
 				</div>
 			</div>
